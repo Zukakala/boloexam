@@ -1,0 +1,122 @@
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-lora: 'Lora', serif;
+  --font-fira: 'Fira Code', monospace;
+
+  --bg-light: #fff;
+  --text-light: #111;
+  --bg-dark: #111;
+  --text-dark: #fff;
+
+  --accent: #f62525;
+}
+
+[data-theme='light'] {
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+}
+
+[data-theme='dark'] {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-inter);
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+
+body[data-font='inter'] {
+  font-family: var(--font-inter);
+}
+body[data-font='lora'] {
+  font-family: var(--font-lora);
+}
+body[data-font='fira'] {
+  font-family: var(--font-fira);
+}
+
+.container {
+  max-width: 720px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.search {
+  display: flex;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.search input {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  background: #eee;
+}
+
+.search button {
+  background: var(--accent);
+  border: none;
+  padding: 0 1rem;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.result h2 {
+  font-size: 2rem;
+}
+
+.meaning {
+  margin-bottom: 1.5rem;
+}
+
+.meaning h4 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.font-select {
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.theme-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.info {
+  color: var(--accent);
+}
+.error {
+  color: crimson;
+}
